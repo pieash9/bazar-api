@@ -56,12 +56,12 @@ export class UsersService {
     return 'This action adds a new user';
   }
 
-  findAll() {
-    return `This action returns all users`;
+  async findAll(): Promise<UserEntity[]> {
+    return await this.usersRepository.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  async findOne(id: number): Promise<UserEntity> {
+    return await this.usersRepository.findOneBy({ id });
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
