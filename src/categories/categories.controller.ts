@@ -32,21 +32,22 @@ export class CategoriesController {
   }
 
   @Get()
-  findAll() {
-    return this.categoriesService.findAll();
+  async findAll(): Promise<CategoryEntity[]> {
+    return await this.categoriesService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.categoriesService.findOne(+id);
+  async findOne(@Param('id') id: string): Promise<CategoryEntity> {
+    return await this.categoriesService.findOne(+id);
   }
 
+  @UseGuards(AuthenticationGuard, AuthorizeGuard([Roles.ADMIN]))
   @Patch(':id')
-  update(
+  async update(
     @Param('id') id: string,
     @Body() updateCategoryDto: UpdateCategoryDto,
-  ) {
-    return this.categoriesService.update(+id, updateCategoryDto);
+  ): Promise<CategoryEntity> {
+    return await this.categoriesService.update(+id, updateCategoryDto);
   }
 
   @Delete(':id')
