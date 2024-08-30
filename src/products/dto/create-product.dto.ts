@@ -33,7 +33,7 @@ export class CreateProductDto {
   @IsArray({ message: 'images must be an array format' })
   images: string[];
 
-  @IsNotEmpty({ message: 'category is required' })
-  @IsNumber({}, { message: 'category must be a number' })
-  category: number;
+  @IsNotEmpty({ message: 'categoryId is required' })
+  @IsNumber({}, { message: 'categoryId must be a number' })
+  categoryId: number;
 }
