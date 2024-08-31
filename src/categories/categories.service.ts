@@ -27,7 +27,7 @@ export class CategoriesService {
   }
 
   async findOne(id: number): Promise<CategoryEntity> {
-    return await this.categoriesRepository.findOne({
+    const category = await this.categoriesRepository.findOne({
       where: { id },
       relations: { addedBy: true },
       select: {
@@ -38,6 +38,10 @@ export class CategoriesService {
         },
       },
     });
+
+    if (!category) throw new NotFoundException('Category not found');
+
+    return category;
   }
 
   async update(
