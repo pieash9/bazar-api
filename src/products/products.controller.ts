@@ -19,7 +19,8 @@ import { Roles } from 'src/utility/common/user-roles.enum';
 import { CurrentUser } from 'src/utility/decorators/current-user.decorator';
 import { UserEntity } from 'src/users/entities/user.entity';
 import { ProductEntity } from './entities/product.entity';
-import { SerializeInterceptor } from 'src/utility/interceptors/serialize.interceptor';
+import { SerializeIncludes } from 'src/utility/interceptors/serialize.interceptor';
+import { ProductsDto } from './dto/products.dto';
 
 @Controller('products')
 export class ProductsController {
@@ -35,8 +36,8 @@ export class ProductsController {
   }
 
   @Get()
-  @UseInterceptors(SerializeInterceptor)
-  async findAll(@Query() query: any): Promise<any> {
+  @SerializeIncludes(ProductsDto)
+  async findAll(@Query() query: any): Promise<ProductsDto> {
     return await this.productsService.findAll(query);
   }
 
@@ -61,7 +62,7 @@ export class ProductsController {
 
   @UseGuards(AuthenticationGuard, AuthorizeGuard([Roles.ADMIN]))
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.productsService.remove(+id);
+  async remove(@Param('id') id: string) {
+    return await this.productsService.remove(+id);
   }
 }

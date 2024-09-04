@@ -1,5 +1,7 @@
 import {
   BadRequestException,
+  forwardRef,
+  Inject,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -23,7 +25,8 @@ export class OrdersService {
     private readonly orderRepository: Repository<OrderEntity>,
 
     @InjectRepository(OrdersProductEntity)
-    private readonly ordersRepository: Repository<OrdersProductEntity>,
+    private readonly ordersProductRepository: Repository<OrdersProductEntity>,
+    @Inject(forwardRef(() => ProductsService))
     private readonly productService: ProductsService,
   ) {}
 
@@ -89,6 +92,17 @@ export class OrdersService {
         shippingAddress: true,
         user: true,
         products: { product: true },
+      },
+    });
+  }
+
+  async findOneByProductId(id: number) {
+    return await this.ordersProductRepository.findOne({
+      where: {
+        product: { id },
+      },
+      relations: {
+        product: true,
       },
     });
   }
