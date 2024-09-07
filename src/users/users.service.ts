@@ -12,6 +12,7 @@ import { UserSignUpDto } from './dto/user-signup.dto';
 import { compareSync, hashSync } from 'bcrypt';
 import { UserSigninDto } from './dto/user-signin.dto';
 import { sign } from 'jsonwebtoken';
+import 'dotenv/config';
 
 @Injectable()
 export class UsersService {
