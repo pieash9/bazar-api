@@ -6,7 +6,8 @@ import { CategoriesModule } from './categories/categories.module';
 import { ProductsModule } from './products/products.module';
 import { ReviewsModule } from './reviews/reviews.module';
 import { OrdersModule } from './orders/orders.module';
-import { dataSourceOptions } from 'db/data-source';
+import { dataSourceOptions } from '../db/data-source';
+// import { dataSourceOptions } from 'db/data-source';
 
 @Module({
   imports: [
