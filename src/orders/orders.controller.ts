@@ -13,7 +13,7 @@ import { OrdersService } from './orders.service';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
 import { AuthenticationGuard } from 'src/utility/guards/authentication.guard';
-import { CurrentUser } from 'src/utility/decorators/current-user.decorator';
+import { CurrentUser } from '../utility/decorators/current-user.decorator';
 import { UserEntity } from 'src/users/entities/user.entity';
 import { OrderEntity } from './entities/order.entity';
 import { AuthorizeGuard } from 'src/utility/guards/authorization.guard';
