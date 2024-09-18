@@ -1,7 +1,7 @@
-import { CategoryEntity } from 'src/categories/entities/category.entity';
-import { OrderEntity } from 'src/orders/entities/order.entity';
-import { ProductEntity } from 'src/products/entities/product.entity';
-import { ReviewEntity } from 'src/reviews/entities/review.entity';
+import { CategoryEntity } from '../../categories/entities/category.entity';
+import { OrderEntity } from '../../orders/entities/order.entity';
+import { ProductEntity } from '../../products/entities/product.entity';
+import { ReviewEntity } from '../../reviews/entities/review.entity';
 import { Roles } from '../../utility/common/user-roles.enum';
 import {
   Column,

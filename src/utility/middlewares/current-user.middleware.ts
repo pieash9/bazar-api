@@ -2,8 +2,8 @@ import { Injectable, NestMiddleware } from '@nestjs/common';
 import { isArray } from 'class-validator';
 import { Request, Response, NextFunction } from 'express';
 import { verify } from 'jsonwebtoken';
-import { UserEntity } from 'src/users/entities/user.entity';
-import { UsersService } from 'src/users/users.service';
+import { UserEntity } from '../../users/entities/user.entity';
+import { UsersService } from '../../users/users.service';
 import 'dotenv/config';
 
 declare global {

@@ -12,11 +12,11 @@ import {
 import { OrdersService } from './orders.service';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
-import { AuthenticationGuard } from 'src/utility/guards/authentication.guard';
+import { AuthenticationGuard } from '../utility/guards/authentication.guard';
 import { CurrentUser } from '../utility/decorators/current-user.decorator';
-import { UserEntity } from 'src/users/entities/user.entity';
+import { UserEntity } from '../users/entities/user.entity';
 import { OrderEntity } from './entities/order.entity';
-import { AuthorizeGuard } from 'src/utility/guards/authorization.guard';
+import { AuthorizeGuard } from '../utility/guards/authorization.guard';
 import { Roles } from '../utility/common/user-roles.enum';
 import { UpdateOrderStatusDto } from './dto/update-order-status.dto';
 

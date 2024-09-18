@@ -15,10 +15,10 @@ import { UserSignUpDto } from './dto/user-signup.dto';
 import { UserEntity } from './entities/user.entity';
 import { UserSigninDto } from './dto/user-signin.dto';
 import { CurrentUser } from '../utility/decorators/current-user.decorator';
-import { AuthenticationGuard } from 'src/utility/guards/authentication.guard';
-import { AuthorizeRoles } from 'src/utility/decorators/authorize-roles.decorator';
+import { AuthenticationGuard } from '../utility/guards/authentication.guard';
+import { AuthorizeRoles } from '../utility/decorators/authorize-roles.decorator';
 import { Roles } from '../utility/common/user-roles.enum';
-import { AuthorizeGuard } from 'src/utility/guards/authorization.guard';
+import { AuthorizeGuard } from '../utility/guards/authorization.guard';
 
 @Controller('users')
 export class UsersController {

@@ -11,11 +11,11 @@ import {
 import { ReviewsService } from './reviews.service';
 import { CreateReviewDto } from './dto/create-review.dto';
 import { UpdateReviewDto } from './dto/update-review.dto';
-import { AuthenticationGuard } from 'src/utility/guards/authentication.guard';
+import { AuthenticationGuard } from '../utility/guards/authentication.guard';
 import { CurrentUser } from '../utility/decorators/current-user.decorator';
-import { UserEntity } from 'src/users/entities/user.entity';
+import { UserEntity } from '../users/entities/user.entity';
 import { ReviewEntity } from './entities/review.entity';
-import { AuthorizeGuard } from 'src/utility/guards/authorization.guard';
+import { AuthorizeGuard } from '../utility/guards/authorization.guard';
 import { Roles } from '../utility/common/user-roles.enum';
 
 @Controller('reviews')

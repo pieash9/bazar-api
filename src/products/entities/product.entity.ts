@@ -1,7 +1,7 @@
-import { CategoryEntity } from 'src/categories/entities/category.entity';
-import { OrdersProductEntity } from 'src/orders/entities/orders-product.entity';
-import { ReviewEntity } from 'src/reviews/entities/review.entity';
-import { UserEntity } from 'src/users/entities/user.entity';
+import { CategoryEntity } from '../../categories/entities/category.entity';
+import { OrdersProductEntity } from '../../orders/entities/orders-product.entity';
+import { ReviewEntity } from '../../reviews/entities/review.entity';
+import { UserEntity } from '../../users/entities/user.entity';
 import {
   Column,
   CreateDateColumn,

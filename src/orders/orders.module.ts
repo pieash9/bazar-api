@@ -5,7 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { OrderEntity } from './entities/order.entity';
 import { OrdersProductEntity } from './entities/orders-product.entity';
 import { ShippingEntity } from './entities/shipping.entity';
-import { ProductsModule } from 'src/products/products.module';
+import { ProductsModule } from '../products/products.module';
 
 @Module({
   imports: [

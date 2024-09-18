@@ -7,14 +7,14 @@ import {
 } from '@nestjs/common';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
-import { UserEntity } from 'src/users/entities/user.entity';
+import { UserEntity } from '../users/entities/user.entity';
 import { OrderEntity } from './entities/order.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { OrdersProductEntity } from './entities/orders-product.entity';
 import { ShippingEntity } from './entities/shipping.entity';
-import { ProductEntity } from 'src/products/entities/product.entity';
-import { ProductsService } from 'src/products/products.service';
+import { ProductEntity } from '../products/entities/product.entity';
+import { ProductsService } from '../products/products.service';
 import { UpdateOrderStatusDto } from './dto/update-order-status.dto';
 import { OrderStatus } from './enums/order-status.enum';
 

@@ -12,9 +12,9 @@ import { CategoriesService } from './categories.service';
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
 import { CurrentUser } from '../utility/decorators/current-user.decorator';
-import { UserEntity } from 'src/users/entities/user.entity';
-import { AuthenticationGuard } from 'src/utility/guards/authentication.guard';
-import { AuthorizeGuard } from 'src/utility/guards/authorization.guard';
+import { UserEntity } from '../users/entities/user.entity';
+import { AuthenticationGuard } from '../utility/guards/authentication.guard';
+import { AuthorizeGuard } from '../utility/guards/authorization.guard';
 import { Roles } from '../utility/common/user-roles.enum';
 import { CategoryEntity } from './entities/category.entity';
 

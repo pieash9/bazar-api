@@ -10,7 +10,7 @@ import {
   Timestamp,
 } from 'typeorm';
 import { OrderStatus } from '../enums/order-status.enum';
-import { UserEntity } from 'src/users/entities/user.entity';
+import { UserEntity } from '../../users/entities/user.entity';
 import { ShippingEntity } from './shipping.entity';
 import { OrdersProductEntity } from './orders-product.entity';
 
